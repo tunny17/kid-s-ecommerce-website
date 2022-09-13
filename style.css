@@ -1,0 +1,302 @@
+/* *************************************************************************************************************************************************************** */
+
+body{margin: 0; position: relative;}
+body.pop-up{background: #222;}
+*{
+  font-family: Calibri, sans-serif; 
+  font-weight: normal;
+  color: #333;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/*********************************************************************************************************************************** 
+                      HEADER
+***********************************************************************************************************************************/
+
+header:after{
+  display: block;
+  content: "";
+  clear: both;
+}
+header {
+ float: none;
+ background-color: #fcde67;
+ margin-bottom: 0px;
+}
+.image-and-name {
+  float: left;
+}
+.zafiq {
+  margin-top: 10px;
+  width: 100px;
+  margin-left: 30px;
+}
+.zafiq-kiddies {
+  float: left;
+}
+.zafiq-kiddies p {
+  margin-left: 10px;
+  text-shadow: 1px 1px;
+  margin-top: 30px;
+  font-size: 20px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.cart {
+  float: right;
+}
+.cart .cart-basket {
+  width: 40px;
+  margin-right: 50px;
+  margin-top: 30px;
+}
+
+/*********************************************************************************** 
+                    NAVBAR
+***********************************************************************************/
+.navbarr {
+  margin: 0px;
+  margin-top: 10px;
+  list-style: none;
+  text-align: center;
+  padding-left: 0px;
+  padding-top: 5px;
+  padding-bottom: 0px;
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 15px;
+}
+.navbarr li {
+  display: inline;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-right: 0px;
+  margin-left: 60px;
+  cursor: pointer;
+}
+a {
+  text-decoration: none;
+}
+.svg-icons-div {
+  margin-left: 400px;
+  margin-right: 0px;
+}
+.svg-icons {
+  width: 15px;
+}
+
+/**************************************************************************************************************************** 
+                        HERO
+****************************************************************************************************************************/
+
+.hero {
+  display: flex;
+  justify-content: flex-start;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  padding-right: 10px;
+  background-color: white;
+  margin-left: 200px;
+  margin-right: 250px;
+  margin-top: 0px;
+  border-radius: 50px;
+  animation: swiggle 3s linear infinite forwards;
+}
+.top-stuff {
+  background-color: #fcde67;
+  padding-bottom: 80px;
+  scroll-behavior: smooth;
+}
+.kids-section {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+.to-school {
+  margin-top: 20px;
+  width: 37%;
+  border-radius: 10px;
+  margin-right: 10%;
+}
+.marvel {
+  border-radius: 10px;
+  width: 30%;
+}
+
+.swiper {
+  width: 40%;
+  height: 300px;
+}
+
+.swiper-slide:nth-child(5) {
+  background-image: url(/img/kids/pexels-cottonbro-4569332.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.swiper-slide:nth-child(4) {
+  background-image: url(/img/kids/pexels-anastasia-shuraeva-6966341.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.swiper-slide:nth-child(3) {
+  background-image: url(/img/kids/pexels-amina-filkins-5561459.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+
+/*********************************************************************** 
+              POP-UP ANIMATION STYLES AND KEYFRAMES
+***********************************************************************/
+
+#pop-up {
+  top: -30px;  
+  transform-origin: 5px 5px;
+  animation: drop 3 s forwards,
+             swing 2s 3s forwards;
+}
+
+@keyframes drop {
+  0%{ opacity: 0;}
+  70%{ transform: translateY(300px);}
+  100%{ transform: translateY(200px); opacity: 1;}
+}
+
+@keyframes swing {
+  0%{ transform: translateY(200px) rotateZ(0deg) }
+  40%{ transform: translateY(200px) rotateZ(90deg)}
+  70%{ transform: translateY(200px) rotateZ(70deg)}
+  100%{ transform: translateY(200px) rotateZ(75deg)}
+}
+
+
+/************************************************************************************ 
+                    PRODUCTS 
+************************************************************************************/
+
+.products ul{
+  padding: 0;
+  margin-top: 40px;
+}
+.products li{
+  display: inline-block;
+  list-style-type: none;
+  width: 30%;
+  margin: 30px 1.5%;
+  text-align: center;
+}
+.products button{
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: #555;
+}
+button{
+  padding: 10px;
+  border: 0;
+  color: black;
+  background: rgb(214, 214, 214);
+  margin-left: -5px;
+  margin-left: -5px;
+  border-radius: 0 10px 10px 0;
+  /* border: 1px solid #333; */
+  font-size: 18px;
+  box-shadow: 1px 2px 0px #888888;
+}
+
+.products {
+  margin: 30px;
+  padding: auto;
+}
+
+
+
+/****************************************************************************** 
+                      Products Styles 
+******************************************************************************/
+img {
+  width: 40px;
+}
+button {
+  font-size: 10px;
+}
+h2 {
+  font-size: 20px;
+}
+
+/******************************************************************************** 
+                        FOOTER
+********************************************************************************/
+footer {
+  text-align: center;
+  padding: 20px;
+}
+
+
+/****************************************************************************** 
+                          ANIMATIONS
+******************************************************************************/
+
+.zoom{
+  position: absolute;
+  top: 40px;
+  right: 50%;
+  width: 40px;
+  opacity: 0;
+  animation: zoom 1s ease forwards;
+}
+
+@keyframes zoom {
+  0%{opacity: 0;}
+  50%{opacity: 1;}
+  100%{opacity: 0;  right: 40px;}
+}
+
+@keyframes swiggle {
+  from{ transform: scaleX(-20px)}
+  to{ transform: scaleX(600px)}
+}
+
+/******************************************************************************* 
+                            HOVER PROPERTIES
+********************************************************************************/
+
+.basket button:hover {
+  transform: scale(1.1);
+  transition: 2s;
+}
+.basket .products li .image:hover {
+  transform: scale(1.5);
+  transition: 1s;
+}
+.navbar li {
+  font-size: 14px;
+}
+.cart .cart-basket:hover {
+  transform: scale(1.5);
+  transition: 2s;
+}
+.to-school:hover {
+  transform: scale(1.1);
+  transition: 1s;
+}
+.marvel:hover {
+  transform: scale(1.1);
+  transition: 1s;
+}
+.svg-icons-div:hover {
+  transform: scale(1.1);
+  transition: 1s;
+}
+/************************************************************************* 
+          IMAGE AND NAME
+*************************************************************************/
+

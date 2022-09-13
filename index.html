@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<head>
+  <title>Kkiddies!</title>
+  <link href="style.css" rel="stylesheet" type="text/css">
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+  />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.3.min.js" integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ=" crossorigin="anonymous"></script>
+</head>
+<body class="basket">
+  <section  class="top-stuff">
+        <header>
+            <div  class="image-and-name">
+              <img src="/img/gg (2).png" alt="Zafiq Kiddies"  class="zafiq">
+            </div>
+            <div  class="zafiq-kiddies">
+              <p>Zafiq Kiddies</p>
+            </div>
+            <div  class="cart">
+              <img src="/img/basket.png" alt="cart basket" class="cart-basket">
+            </div>
+        </header>
+
+        <div  class="hero">
+              <nav>
+                <ul class="navbarr">
+                  <li><a href="/index.html">Home</a></li>
+                  <li><a href="/help.html">Help</a></li>
+                  <li><a href="/cart.html">Cart</a></li>
+                  <li><a href="/account.html">Account</a></li>
+                  <div  class="svg-icons-div">
+                    <li>
+                      <img  class="svg-icons" src="/icons8-twitter (1).svg" alt="">
+                    </li>
+                    <li>
+                      <img  class="svg-icons" src="/icons8-instagram.svg" alt="">
+                    </li>
+                    <li>
+                      <img  class="svg-icons" src="/icons8-facebook.svg" alt="">
+                    </li>
+                  </div>
+                </ul>
+              </nav>
+        </div>
+        
+
+        <section  class="kids-section">
+          <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"></div>
+              <div class="swiper-slide"></div>
+              <div class="swiper-slide"></div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+            
+            <div class="swiper-scrollbar"></div>
+          </div>
+        </section>
+  </section>
+  <br>
+
+
+
+ 
+
+
+  <ul class="products">
+    <li>
+      <img src="/img/t-1.jpg"  class="image">
+      <h2>T-Shirt</h2>
+      <button>Add to Basket</button>
+    </li>
+    <li>
+      <img src="/img/t-2.jpg"  class="image">
+      <h2>Cross Bag</h2>
+      <button>Add to Basket</button>
+    </li>
+    <li>
+      <img src="/img/t-3.jpg" class="image">
+      <h2>Sneakers</h2>
+      <button>Add to Basket</button>
+    </li>
+    <li>
+      <img src="/img/t-1.jpg"  class="image">
+      <h2>Shorts</h2>
+      <button>Add to Basket</button>
+    </li>
+    <li>
+      <img src="/img/t-2.jpg"  class="image">
+      <h2>Necklace</h2>
+      <button>Add to Basket</button>
+    </li>
+    <li>
+      <img src="/img/t-3.jpg"  class="image">
+      <h2>Watches</h2>
+      <button>Add to Basket</button>
+    </li>
+  </ul>
+
+  <footer>
+    <h4>Welcome to sport clothing!</h4>
+  </footer>
+
+
+
+
+  <script>
+    $("button").on("click", function(){
+      $(this).closest("li")
+        .find("img")
+        .clone()
+        .addClass("zoom")
+        .appendTo("body");
+      setTimeout(function(){
+        $(".zoom").remove();
+      }, 1000);
+    });
+    
+  </script>
+  <script src="/key.js"></script>
+</body>
